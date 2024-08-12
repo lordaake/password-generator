@@ -79,6 +79,9 @@ h1 {
     width: 100px;
     display: flex;
     justify-content: center;
+    border-radius: 2px;
+    border: solid black;
+    box-shadow: 5px white;
 }
 
 #password-length-label {
