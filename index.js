@@ -43,8 +43,6 @@ function generatePassword() {
 
     passWordBox1.innerText = password;
     passWordBox2.innerText = password2;
-
-    return password;
 }
 
 generateBtn.addEventListener("click", generatePassword)
