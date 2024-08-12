@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <div class="generator-container">
+            <div>
+                <h1>Generate a <br> <span class="span-randompassword">random password</span></h1>
+                <p>Never use an insecure password again.</p>
+            </div>
+            <button id="generate-btn">Generate Passwords</button>
+            <div class="password-boxes">
+                <p class="password-box" id="password-box1"></p>
+                <p class="password-box" id="password-box2"></p>
+            </div>
+            <label for="password-length" id="password-length-label">Password Length:</label>
+            <input type="number" placeholder="Max 15" id="password-length" name="password-length" value="0" min="0">
+            <p class="max-15"></p>
+        </div>
+
+    </main>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
