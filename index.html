@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -16,12 +21,13 @@
                 <p class="password-box" id="password-box1"></p>
                 <p class="password-box" id="password-box2"></p>
             </div>
-            <label for="password-length" id="password-length-label">Password Length (Max 15):</label>
-            <input type="number" placeholder="Max 15" id="password-length" name="password-length" value="0" min="0"
-                max="100" required>
-            <p class="max-15"></p>
+            <div>
+                <label for="password-length" id="password-length-label">Password Length (Max 15):</label>
+                <input type="number" placeholder="Max 15" id="password-length" name="password-length" value="0" min="0"
+                    max="15" required>
+                <p class="max-15" id="length-warning"></p>
+            </div>
         </div>
-
     </main>
     <script src="index.js" type="module"></script>
 </body>

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -7,6 +11,11 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background-color: #12141C;
+    /* Added a background color for better contrast */
+    padding: 20px;
+    /* Added padding for smaller screens */
 }
 
 main {
@@ -15,51 +24,64 @@ main {
     align-items: center;
     background-color: rgba(18, 20, 28, 0.677);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
+    /* Added padding for better spacing on smaller screens */
 }
 
 .generator-container {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     margin: 0 auto;
-    width: 30%;
-    height: 500px;
-    padding: 64px 61px 64px 62px;
-    gap: 30px;
-    flex-shrink: 0;
+    width: 100%;
+    max-width: 400px;
+    /* Set a max-width for larger screens */
+    padding: 2rem;
+    /* Use relative units for padding */
+    gap: 1.5rem;
+    /* Use relative units for gap */
     background: #1C1C1C;
     color: white;
     border-radius: 20px;
     border: solid rgba(255, 255, 255, 0.528) 1px;
-    box-shadow: rgba(255, 255, 255, 0.54);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adjusted box-shadow for better appearance */
 }
 
 .password-boxes {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: column;
+    /* Stack password boxes vertically on smaller screens */
+    gap: 1rem;
 }
 
 .password-box {
-    background: white;
-    padding: 10px;
-    margin: 10px 10px 10px 0;
-    width: 100%;
-    height: 15px;
-    border-radius: 6px;
     background: #273549;
+    padding: 0.75rem;
+    width: 100%;
+    min-height: 2.5rem;
+    border-radius: 6px;
+    color: #fff;
+    /* Ensure text is visible */
+    word-break: break-all;
+    /* Handle long passwords gracefully */
 }
 
 #generate-btn {
-    width: 35%;
-    padding: 10px;
+    width: 100%;
+    padding: 0.75rem;
     color: white;
-    border: 0;
+    border: none;
     border-radius: 6px;
     background: #10B981;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#generate-btn:hover {
+    background: #059669;
 }
 
 .span-randompassword {
@@ -67,28 +89,95 @@ main {
 }
 
 h1 {
-    font-family: Karla;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 40px;
-    letter-spacing: -1px;
+    font-family: 'Inter', sans-serif;
+    /* Changed to 'Inter' for consistency */
+    font-size: 2rem;
+    /* Use relative units */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc;
 }
 
 #password-length {
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    border-radius: 2px;
-    border: solid black;
-    box-shadow: 5px white;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    color: #fff;
+    background: #1C1C1C;
+}
+
+#password-length:focus {
+    outline: none;
+    border-color: #10B981;
 }
 
 #password-length-label {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
 }
 
 .max-15 {
     color: red;
+    font-size: 0.875rem;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 600px) {
+    .password-boxes {
+        flex-direction: row;
+        /* Arrange password boxes side by side on larger screens */
+    }
+
+    .password-box {
+        flex: 1;
+    }
+
+    #password-length {
+        width: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    .generator-container {
+        padding: 3rem;
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    #password-length {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .generator-container {
+        padding: 4rem;
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #password-length {
+        width: 250px;
+    }
 }
