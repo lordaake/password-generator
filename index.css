@@ -13,9 +13,7 @@ body {
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     background-color: #12141C;
-    /* Added a background color for better contrast */
     padding: 20px;
-    /* Added padding for smaller screens */
 }
 
 main {
@@ -26,7 +24,6 @@ main {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
-    /* Added padding for better spacing on smaller screens */
 }
 
 .generator-container {
@@ -35,23 +32,18 @@ main {
     margin: 0 auto;
     width: 100%;
     max-width: 400px;
-    /* Set a max-width for larger screens */
     padding: 2rem;
-    /* Use relative units for padding */
     gap: 1.5rem;
-    /* Use relative units for gap */
     background: #1C1C1C;
     color: white;
     border-radius: 20px;
     border: solid rgba(255, 255, 255, 0.528) 1px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Adjusted box-shadow for better appearance */
 }
 
 .password-boxes {
     display: flex;
     flex-direction: column;
-    /* Stack password boxes vertically on smaller screens */
     gap: 1rem;
 }
 
@@ -62,9 +54,7 @@ main {
     min-height: 2.5rem;
     border-radius: 6px;
     color: #fff;
-    /* Ensure text is visible */
     word-break: break-all;
-    /* Handle long passwords gracefully */
 }
 
 #generate-btn {
@@ -90,9 +80,7 @@ main {
 
 h1 {
     font-family: 'Inter', sans-serif;
-    /* Changed to 'Inter' for consistency */
     font-size: 2rem;
-    /* Use relative units */
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.05em;
@@ -136,7 +124,6 @@ p {
 @media (min-width: 600px) {
     .password-boxes {
         flex-direction: row;
-        /* Arrange password boxes side by side on larger screens */
     }
 
     .password-box {
